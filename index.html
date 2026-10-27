@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arcadia EQ — автоматический эквалайзер для наушников</title>
+<meta name="description" content="Arcadia EQ сам определяет ваши Bluetooth-наушники и применяет коррекцию звука во всех приложениях.">
+<style>
+:root{--bg:#0e0f13;--fg:#eceef4;--mut:#9aa0b4;--acc:#7c9cff;--card:#171922}
+@media(prefers-color-scheme:light){:root{--bg:#f6f7fb;--fg:#14161d;--mut:#5b6174;--acc:#3d5afe;--card:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:64px 16px}
+h1{font-size:2.4rem;line-height:1.15;margin:0 0 16px}
+p.lead{color:var(--mut);font-size:1.15rem;margin:0 0 28px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600}
+.grid{display:grid;gap:14px;margin:48px 0}
+.card{background:var(--card);border-radius:14px;padding:18px 20px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--mut)}
+svg{width:100%;height:auto;margin:32px 0 0}
+footer{color:var(--mut);font-size:.9rem;margin-top:48px}
+</style>
+</head>
+<body>
+<main>
+  <h1>Наушники, которые звучат правильно — без настройки</h1>
+  <p class="lead">Arcadia EQ сам узнаёт ваши Bluetooth-наушники, подставляет готовую коррекцию звука и работает поверх любого плеера: Spotify, YouTube, браузер.</p>
+  <a class="btn" href="https://github.com/jj1337/arcadia-eq-site/issues/new?title=Хочу+Arcadia+EQ&body=Мои+наушники:+">Хочу попробовать</a>
+
+  <svg viewBox="0 0 600 120" role="img" aria-label="Кривая коррекции АЧХ">
+    <path d="M0 70 C80 70 110 30 200 50 S330 100 400 60 S520 40 600 70" fill="none" stroke="var(--mut)" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M0 60 C100 60 150 60 250 60 S400 60 600 60" fill="none" stroke="var(--acc)" stroke-width="3"/>
+  </svg>
+
+  <div class="grid">
+    <div class="card"><h3>Определяет модель сам</h3><p>Подключили наушники — профиль подобрался автоматически по базе AutoEq.</p></div>
+    <div class="card"><h3>Работает везде</h3><p>Системный уровень: не нужен встроенный эквалайзер в плеере.</p></div>
+    <div class="card"><h3>Отдельный профиль на каждый выход</h3><p>Наушники, колонка, проводные — у каждого свои настройки.</p></div>
+    <div class="card"><h3>Включил и забыл</h3><p>Фоновая служба, запускается после перезагрузки.</p></div>
+  </div>
+
+  <p>Приложение в разработке для Android. Нажмите «Хочу попробовать» и напишите модель ваших наушников — это поможет понять, какие профили нужны в первую очередь.</p>
+  <footer>© Arcadia EQ</footer>
+</main>
+</body>
+</html>
